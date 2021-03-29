@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(../images/teahub.io-61.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  padding: 50px;
+}
+
+.search-form {
+  text-align: center;
+}
+
+.form-control {
+  text-align: center;
+
+  width: 300px;
+  height: 40px;
+  padding: 15px;
+  border: 0.5px solid rgb(82, 108, 250);
+  border-radius: 10px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.06);
+}
+
+.card-text {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 30px;
+}
+.card-text.title {
+  font-size: 60px;
+}
+.card {
+  display: flex;
+}
+.card-body {
+  margin-right: 60px;
+}
+.flag {
+  align-items: center;
+}

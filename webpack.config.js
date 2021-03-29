@@ -11,9 +11,26 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
+      },
+      {
         test: /\.js$/,
         exclude: /node_modules/,
         use: ['babel-loader'],
+      },
+      {
+        test: /\.hbs$/,
+        loader: 'handlebars-loader',
+        exclude: /node_modules/,
+      },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+          },
+        ],
       },
     ],
   },
@@ -22,7 +39,7 @@ module.exports = {
   ],
 
   devServer: {
-    port: 8888,
+    port: 8080,
     open: true,
     stats: 'errors-only',
   },

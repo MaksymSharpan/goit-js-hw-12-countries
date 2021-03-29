@@ -31,13 +31,13 @@ function renderCountryPage(countries) {
     cardContainer.innerHTML = '';
     cardContainer.insertAdjacentHTML('beforeend', markup);
   }
-  if (countries.length > 1) {
+  if (countries.length > 1 && countries.length < 10) {
     const markup = template_list(countries);
     cardContainer.innerHTML = '';
     cardContainer.insertAdjacentHTML('beforeend', markup);
     return;
   }
-  if (countries.length > 10) {
+  if (countries.length >= 10) {
     cardContainer.innerHTML = '';
     postError('Введено мало символов, уточните Ваш запрос');
     return;
